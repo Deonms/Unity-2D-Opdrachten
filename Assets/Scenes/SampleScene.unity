@@ -1209,7 +1209,7 @@ GameObject:
   - component: {fileID: 1419189491}
   - component: {fileID: 1419189490}
   m_Layer: 3
-  m_Name: Square (6)
+  m_Name: bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
