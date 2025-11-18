@@ -11,6 +11,9 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.W))
+        {
+            print("ik heb W ingedrukt");
+        }
     }
 }
