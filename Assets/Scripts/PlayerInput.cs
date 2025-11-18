@@ -17,31 +17,26 @@ public class PlayerInput : MonoBehaviour
         float Z = -1;
         if (Input.GetKey(KeyCode.W))
         {
-            Y = (float)(+ 0.5);
             print("ik heb W ingedrukt");
-            Vector3 position = new Vector3(X, Y, Z);
+            Vector3 position = new Vector3(X, (float)(+0.5), Z);
             transform.position = new Vector3(X, Y, Z);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            
-            Y = (float)(- 0.5);
             print("Ik heb S ingedrukt");
-            Vector3 position = new Vector3(X, Y, Z);
+            Vector3 position = new Vector3(X, (float)(-0.5), Z);
             transform.position = new Vector3(X, Y, Z);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            X = (float)(- 0.5);
             print("Ik heb A ingedrukt");
-            Vector3 position = new Vector3(X, Y, Z);
+            Vector3 position = new Vector3((float)(-0.5), Y, Z);
             transform.position = new Vector3(X, Y, Z);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            X = (float)(+ 0.5);
             print("Ik heb D ingedrukt");
-            Vector3 position = new Vector3(X, Y, Z);
+            Vector3 position = new Vector3((float)(+0.5), Y, Z);
             transform.position = new Vector3(X, Y, Z);
         }
     }
