@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
@@ -11,11 +12,15 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float X = 0;
+        float Y = 0;
+        float Z = -1;
         if (Input.GetKey(KeyCode.W))
         {
+            Y = (float)(Y + 0.5);
             print("ik heb W ingedrukt");
             Vector3 position = new Vector3(0, 0, 0);
-            transform.position = new Vector3(0, 0, 0);
+            transform.position = new Vector3(X, Y, Z);
         }
         else if (Input.GetKey(KeyCode.S))
         {
