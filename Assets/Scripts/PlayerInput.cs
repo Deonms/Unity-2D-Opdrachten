@@ -14,6 +14,8 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             print("ik heb W ingedrukt");
+            Vector3 position = new Vector3(0, 0, 0);
+            transform.position = new Vector3(0, 0, 0);
         }
         else if (Input.GetKey(KeyCode.S))
         {
