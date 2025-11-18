@@ -15,5 +15,17 @@ public class PlayerInput : MonoBehaviour
         {
             print("ik heb W ingedrukt");
         }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            print("Ik heb S ingedrukt");
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            print("Ik heb A ingedrukt");
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            print("Ik heb D ingedrukt");
+        }
     }
 }
