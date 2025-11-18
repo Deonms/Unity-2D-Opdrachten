@@ -515,8 +515,8 @@ Transform:
   m_GameObject: {fileID: 257225865}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4241, y: 3.8, z: 0}
-  m_LocalScale: {x: 2.8952436, y: 5.780601, z: 1}
+  m_LocalPosition: {x: 6.4241, y: 3.7376633, z: 0}
+  m_LocalScale: {x: 2.8952436, y: 5.9054623, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -871,8 +871,8 @@ Transform:
   m_GameObject: {fileID: 506681949}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4241, y: -3.3, z: 0}
-  m_LocalScale: {x: 2.8952436, y: 5.780601, z: 1}
+  m_LocalPosition: {x: 6.4241, y: -3.2766235, z: 0}
+  m_LocalScale: {x: 2.8952436, y: 5.8273883, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1202,6 +1202,7 @@ GameObject:
   - component: {fileID: 751841167}
   - component: {fileID: 751841166}
   - component: {fileID: 751841168}
+  - component: {fileID: 751841169}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1273,7 +1274,7 @@ Transform:
   m_GameObject: {fileID: 751841165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0.2249999, z: -1}
+  m_LocalPosition: {x: 2.0769577, y: 0.2249999, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1296,7 +1297,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1308,6 +1309,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &751841169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751841165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30e080a66cafce9459b01910fce2ecd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Xspeed: 0.05
+  _Yspeed: 0.05
 --- !u!1 &900792586
 GameObject:
   m_ObjectHideFlags: 0
