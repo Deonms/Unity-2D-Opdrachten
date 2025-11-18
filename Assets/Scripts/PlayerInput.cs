@@ -4,12 +4,11 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-   // [SerializeField] private float _X = 5;
+    // [SerializeField] private float _X = 5;
     void Start()
     {
-        
-    }
 
+    }
     // Update is called once per frame
     void Update()
     {
