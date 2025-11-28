@@ -40,5 +40,11 @@ public class PlayerInput : MonoBehaviour
             Vector3 position = new Vector3(X = (_Yspeed), Y, 0);
             transform.position += new Vector3(X, Y, 0);
         }
+        if (Input.GetKey(KeyCode.R))
+        {
+            print("Ik heb R ingedrukt");
+            quaternion rotation = new quaternion(0, 0, 0, 0);
+            transform.rotation = new quaternion(0, 0, 0, 0);
+        }
     }
 }
