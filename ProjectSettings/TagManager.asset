@@ -6,6 +6,7 @@ TagManager:
   tags:
   - coin
   - deathblock
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

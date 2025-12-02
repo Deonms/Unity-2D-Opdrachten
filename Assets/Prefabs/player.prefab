@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Xspeed: 0.025
-  _Yspeed: 0.05
+  _Yspeed: 0.1
 --- !u!61 &9135907255555407628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -464,6 +464,8 @@ MonoBehaviour:
   _cointag: coin
   _Death: deathblock
   _scoreboard: 0
+  _respawnY: 0.2249999
+  _respawnX: 2.076958
 --- !u!1 &7008851359813107078
 GameObject:
   m_ObjectHideFlags: 0

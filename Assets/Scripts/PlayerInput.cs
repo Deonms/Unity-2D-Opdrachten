@@ -15,7 +15,7 @@ public class PlayerInput : MonoBehaviour
     {
         float X = 0;
         float Y = 0;
-        float Z = -1;
+        //float Z = -1;
         if (Input.GetKey(KeyCode.W))
         {
             print("ik heb W ingedrukt");
@@ -43,8 +43,8 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             print("Ik heb R ingedrukt");
-            quaternion rotation = new quaternion(0, 0, 0, 0);
-            transform.rotation = new quaternion(0, 0, 0, 0);
+            quaternion rotation = new (0, 0, 0, 0);
+            transform.rotation = rotation;
         }
     }
 }
