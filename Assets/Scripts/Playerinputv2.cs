@@ -6,8 +6,8 @@ public class Playerinputv2 : MonoBehaviour
 {
     [SerializeField] private string _cointag = "coin";
     [SerializeField] private string _Death = "deathblock";
-    [SerializeField] private string _checkpoint = "checkpoint";
     [SerializeField] private int _scoreboard;
+    [SerializeField] public int _playeramount = 1;
     [SerializeField] public float _respawnY = 0.2249999f;
     [SerializeField] public float _respawnX = 2.076958f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,5 +34,6 @@ public class Playerinputv2 : MonoBehaviour
             quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
+        
     }
 }
