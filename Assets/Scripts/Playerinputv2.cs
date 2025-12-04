@@ -10,6 +10,7 @@ public class Playerinputv2 : MonoBehaviour
     [SerializeField] public int _playeramount = 1;
     [SerializeField] public float _respawnY = 0.2249999f;
     [SerializeField] public float _respawnX = 2.076958f;
+    [SerializeField] private string _GrassAndWater = "GrassAndWater";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
