@@ -7,10 +7,10 @@ public class Playerinputv2 : MonoBehaviour
     [SerializeField] private string _cointag = "coin";
     [SerializeField] private string _Death = "deathblock";
     [SerializeField] private int _CoinsCollected;
-    [SerializeField] public int _playeramount = 1;
-    [SerializeField] public float _respawnY = 0.2249999f;
-    [SerializeField] public float _respawnX = 2.076958f;
-    [SerializeField] private string _GrassAndWater = "GrassAndWater";
+    [SerializeField] private int _playeramount = 1;
+    [SerializeField] private float _respawnY = 0.2249999f;
+    [SerializeField] private float _respawnX = 2.076958f;
+    [SerializeField] private string _pushblock = "PushBlock";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,6 +36,10 @@ public class Playerinputv2 : MonoBehaviour
             quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
-        
+        if (collision.gameObject.CompareTag(_pushblock))
+        {
+            
+        }
+
     }
 }

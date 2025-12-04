@@ -198,6 +198,7 @@ MonoBehaviour:
   _playeramount: 0
   _respawnY: 0.2249999
   _respawnX: 2.076958
+  _pushblock: PushBlock
 --- !u!1 &3763978021688108230
 GameObject:
   m_ObjectHideFlags: 0
