@@ -8,6 +8,7 @@ TagManager:
   - deathblock
   - Checkpoint
   - GrassAndWater
+  - PushBlock
   layers:
   - Default
   - TransparentFX
