@@ -6,7 +6,7 @@ public class Playerinputv2 : MonoBehaviour
 {
     [SerializeField] private string _cointag = "coin";
     [SerializeField] private string _Death = "deathblock";
-    [SerializeField] private int _scoreboard;
+    [SerializeField] private int _CoinsCollected;
     [SerializeField] public int _playeramount = 1;
     [SerializeField] public float _respawnY = 0.2249999f;
     [SerializeField] public float _respawnX = 2.076958f;
@@ -26,6 +26,7 @@ public class Playerinputv2 : MonoBehaviour
         if (collision.gameObject.CompareTag(_cointag))
         {
             Destroy(collision.gameObject);
+            _CoinsCollected = _CoinsCollected + 1;
         }
         if (collision.gameObject.CompareTag(_Death))
         {
