@@ -5,7 +5,7 @@ public class PlayerInput : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private float _Xspeed = 0.025f;
-    [SerializeField] private float _Yspeed = 0.1f;
+    [SerializeField] private float _Yspeed = 0.075f;
     void Start()
     {
 
