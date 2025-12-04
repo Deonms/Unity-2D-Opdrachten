@@ -9,6 +9,8 @@ TagManager:
   - Checkpoint
   - GrassAndWater
   - PushBlock
+  - PushBlockButton
+  - DestroyPushwall1
   layers:
   - Default
   - TransparentFX

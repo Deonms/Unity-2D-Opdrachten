@@ -11,6 +11,8 @@ public class Playerinputv2 : MonoBehaviour
     [SerializeField] private float _respawnY = 0.2249999f;
     [SerializeField] private float _respawnX = 2.076958f;
     [SerializeField] private string _pushblock = "PushBlock";
+    float YPushblock = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,10 +38,10 @@ public class Playerinputv2 : MonoBehaviour
             quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
-        /*if (collision.gameObject.CompareTag(_pushblock))
+        if (collision.gameObject.CompareTag(_pushblock))
         {
             
-        }*/
+        }
 
     }
 }
