@@ -43,7 +43,7 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             print("Ik heb R ingedrukt");
-            quaternion rotation = new (0, 0, 0, 0);
+            quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
     }
