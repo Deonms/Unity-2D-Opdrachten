@@ -17,7 +17,7 @@ public class PushBlockevents : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKey(KeyCode.Z))
+       /*if (Input.GetKey(KeyCode.Z))
         {
             print("ik heb Z ingedrukt");
             Vector3 position = new Vector3(X, Y = (_Yspeed), 0);
@@ -26,11 +26,10 @@ public class PushBlockevents : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(_destroywall))
+        if (collision.gameObject.CompareTag(_button))
         {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
+            Destroy(gameObject.CompareTag(_destroywall));
         }
 
-    }
+    }*/
 }
