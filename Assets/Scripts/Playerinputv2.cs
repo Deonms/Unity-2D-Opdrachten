@@ -38,10 +38,10 @@ public class Playerinputv2 : MonoBehaviour
             quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
-        if (collision.gameObject.CompareTag(_pushblock))
-        {
+        //if (collision.gameObject.CompareTag(_pushblock))
+        //{
             
-        }
+       // }
 
     }
 }
