@@ -23,12 +23,6 @@ public class Player2Input : MonoBehaviour
             Vector3 position = new Vector3(X, Y = (_Yspeed), 0);
             transform.position += position;
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            print("Ik heb DownArrow ingedrukt");
-            Vector3 position = new Vector3(X, Y = (_Yspeed), 0);
-            transform.position -= position;
-        }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             print("Ik heb LeftArrow ingedrukt");
