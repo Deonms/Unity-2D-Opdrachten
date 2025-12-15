@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -6,13 +7,12 @@ public class Playerinputv2 : MonoBehaviour
 {
     [SerializeField] private string _cointag = "coin";
     [SerializeField] private string _Death = "deathblock";
-    [SerializeField] private int _CoinsCollected;
     [SerializeField] private int _playeramount = 1;
     [SerializeField] private float _respawnY = 0.2249999f;
     [SerializeField] private float _respawnX = 2.076958f;
-    [SerializeField] private string _pushblock = "PushBlock";
-    float YPushblock = 0;
+    [SerializeField] private AudioClip _coinpickup;
 
+    private int _score;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,10 +26,13 @@ public class Playerinputv2 : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(_cointag))
+        CoinValue coinValue;
+        if (collision.gameObject.CompareTag(_cointag) && collision.gameObject.TryGetComponent<CoinValue>(out coinValue))
         {
+            _score += coinValue.GetScoreWorth();
             Destroy(collision.gameObject);
-            _CoinsCollected = _CoinsCollected + 1;
+            print(_score);
+            AudioSource.PlayClipAtPoint(_coinpickup, transform.position);
         }
         if (collision.gameObject.CompareTag(_Death))
         {
@@ -38,10 +41,6 @@ public class Playerinputv2 : MonoBehaviour
             quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
-        //if (collision.gameObject.CompareTag(_pushblock))
-        //{
-            
-       // }
 
     }
 }

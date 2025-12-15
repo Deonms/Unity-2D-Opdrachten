@@ -37,7 +37,7 @@ public class Player2Input : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.L))
         {
-            print("Ik heb l ingedrukt");
+            print("Ik heb L ingedrukt");
             quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
