@@ -1,11 +1,13 @@
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private float _Xspeed = 0.025f;
-    [SerializeField] private float _Yspeed = 0.075f;
+    [SerializeField] private float _Xspeed = 0.15f;
+    [SerializeField] private float _Yspeed = 0.25f;
+   
     void Start()
     {
 
@@ -22,7 +24,7 @@ public class PlayerInput : MonoBehaviour
             Vector3 position = new Vector3(X, Y = (_Yspeed), 0);
             transform.position += position;
         }
-        if (Input.GetKey(KeyCode.A))
+         if (Input.GetKey(KeyCode.A))
         {
             print("Ik heb A ingedrukt");
             Vector3 position = new Vector3(X = (_Xspeed), Y, 0);

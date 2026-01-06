@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Playerinputv2 : MonoBehaviour
 {
@@ -10,7 +11,8 @@ public class Playerinputv2 : MonoBehaviour
     [SerializeField] private int _playeramount = 1;
     [SerializeField] private float _respawnY = 0.2249999f;
     [SerializeField] private float _respawnX = 2.076958f;
-    [SerializeField] private AudioClip _coinpickup;
+    [SerializeField] private AudioClip _coinpickupsound;
+    [SerializeField] private TMP_Text _amountofcoins;
 
     private int _score;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,7 +34,8 @@ public class Playerinputv2 : MonoBehaviour
             _score += coinValue.GetScoreWorth();
             Destroy(collision.gameObject);
             print(_score);
-            AudioSource.PlayClipAtPoint(_coinpickup, transform.position);
+            AudioSource.PlayClipAtPoint(_coinpickupsound, transform.position);
+            _amountofcoins.text = _score.ToString();
         }
         if (collision.gameObject.CompareTag(_Death))
         {

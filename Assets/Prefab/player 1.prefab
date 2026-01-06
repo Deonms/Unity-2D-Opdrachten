@@ -335,7 +335,7 @@ MonoBehaviour:
   _playeramount: 0
   _respawnY: 0.2249999
   _respawnX: 2.076958
-  _coinpickup: {fileID: 8300000, guid: accf671db76388845874c55233f9ed4a, type: 3}
+  _coinpickupsound: {fileID: 8300000, guid: accf671db76388845874c55233f9ed4a, type: 3}
 --- !u!1 &2105361226619120049
 GameObject:
   m_ObjectHideFlags: 0

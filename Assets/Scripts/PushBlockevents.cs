@@ -7,8 +7,8 @@ public class PushBlockevents : MonoBehaviour
     [SerializeField] private string _button = "PushBlockButton";
     [SerializeField] private string _destroywall = "DestroyPushwall1";
     [SerializeField] private GameObject _blockToDestroy;
-    [SerializeField] private float _respawnYblock = 7.885148f;
-    [SerializeField] private float _respawnXblock = 29.0752f;
+    private float _respawnYblock = 16.12177f;
+    private float _respawnXblock = 28.61282f;
     float X = 0;
     float Y = 0;
     [SerializeField] private float _Yspeed = 0.075f;
