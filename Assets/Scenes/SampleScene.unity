@@ -3149,7 +3149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 677310946114534467, guid: 1a4f025fd8de4e2479db175cd7350a8f, type: 3}
       propertyPath: _Yspeed
-      value: 0.075
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1278401115808348228, guid: 1a4f025fd8de4e2479db175cd7350a8f, type: 3}
       propertyPath: m_Name

@@ -6,7 +6,7 @@ public class PlayerInput : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private float _Xspeed = 0.15f;
-    [SerializeField] private float _Yspeed = 0.25f;
+    [SerializeField] public float _Yspeed = 45f;
    
     void Start()
     {
@@ -21,8 +21,7 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             print("ik heb W ingedrukt");
-            Vector3 position = new Vector3(X, Y = (_Yspeed), 0);
-            transform.position += position;
+            transform.Translate(Vector3.up * _Yspeed * Time.deltaTime, Space.World);
         }
          if (Input.GetKey(KeyCode.A))
         {
