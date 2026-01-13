@@ -12,7 +12,9 @@ public class Playerinputv2 : MonoBehaviour
     [SerializeField] private float _respawnY = 0.2249999f;
     [SerializeField] private float _respawnX = 2.076958f;
     [SerializeField] private AudioClip _coinpickupsound;
+    [SerializeField] private AudioClip _coinpickupsound10;
     [SerializeField] private TMP_Text _amountofcoins;
+    [SerializeField] private int _peramount = 10;
 
     private int _score;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,8 +36,11 @@ public class Playerinputv2 : MonoBehaviour
             _score += coinValue.GetScoreWorth();
             Destroy(collision.gameObject);
             print(_score);
-            AudioSource.PlayClipAtPoint(_coinpickupsound, transform.position);
-            _amountofcoins.text = _score.ToString();
+            if (_score != _peramount)
+            {
+                AudioSource.PlayClipAtPoint(_coinpickupsound, transform.position);
+            }
+                _amountofcoins.text = _score.ToString();
         }
         if (collision.gameObject.CompareTag(_Death))
         {
@@ -44,6 +49,10 @@ public class Playerinputv2 : MonoBehaviour
             quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
-
+        if (_score == _peramount)
+        { 
+            AudioSource.PlayClipAtPoint(_coinpickupsound10, transform.position);
+            _peramount = _peramount + 10;
+        }
     }
 }

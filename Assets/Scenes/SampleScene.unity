@@ -3763,6 +3763,10 @@ PrefabInstance:
       propertyPath: _coinpickupsound
       value: 
       objectReference: {fileID: 8300000, guid: accf671db76388845874c55233f9ed4a, type: 3}
+    - target: {fileID: 9144937760308523530, guid: 1a4f025fd8de4e2479db175cd7350a8f, type: 3}
+      propertyPath: _coinpickupsound10
+      value: 
+      objectReference: {fileID: 8300000, guid: ad4f247cfbd1fb7449efc77070a402e1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
