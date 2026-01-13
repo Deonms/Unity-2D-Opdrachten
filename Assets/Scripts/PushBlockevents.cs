@@ -7,6 +7,7 @@ public class PushBlockevents : MonoBehaviour
     [SerializeField] private string _button = "PushBlockButton";
     [SerializeField] private string _destroywall = "DestroyPushwall1";
     [SerializeField] private GameObject _blockToDestroy;
+    [SerializeField] private GameObject _blockToDestroy1;
     private float _respawnYblock = 16.12177f;
     private float _respawnXblock = 28.61282f;
     float X = 0;
@@ -26,9 +27,10 @@ public class PushBlockevents : MonoBehaviour
      private void OnCollisionEnter2D(Collision2D collision)
      {
          if (collision.gameObject.CompareTag(_button))
-         {
-             Destroy(_blockToDestroy);
-         }
+        {
+            Destroy(_blockToDestroy);
+            Destroy(_blockToDestroy1);
+        }
         if (collision.gameObject.CompareTag(_Death))
         {
             Vector3 position = new Vector3(_respawnXblock, _respawnYblock, -1f);
