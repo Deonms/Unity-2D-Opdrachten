@@ -11,6 +11,8 @@ TagManager:
   - PushBlock
   - PushBlockButton
   - DestroyPushwall1
+  - Speed PowerUp
+  - Slowness PowerUp
   layers:
   - Default
   - TransparentFX

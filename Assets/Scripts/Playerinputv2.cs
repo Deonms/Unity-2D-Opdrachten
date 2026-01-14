@@ -55,5 +55,6 @@ public class Playerinputv2 : MonoBehaviour
             AudioSource.PlayClipAtPoint(_coinpickupsound10, transform.position);
             _peramount = _peramount + 10;
         }
+        
     }
-    }
+}

@@ -5,9 +5,13 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private float _Xspeed = 0.15f;
+    [SerializeField] private float _Xspeed = 0.025f;
     [SerializeField] public float _Yspeed = 45f;
-   
+    [SerializeField] private float _speedModifier = 0.025f;
+    [SerializeField] private string _speedPowerUp = "Speed PowerUp";
+    [SerializeField] private string _slownessPowerUp = "Slowness PowerUp";
+
+
     void Start()
     {
 
@@ -23,7 +27,7 @@ public class PlayerInput : MonoBehaviour
             print("ik heb W ingedrukt");
             transform.Translate(Vector3.up * _Yspeed * Time.deltaTime, Space.World);
         }
-         if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             print("Ik heb A ingedrukt");
             Vector3 position = new Vector3(X = (_Xspeed), Y, 0);
@@ -42,4 +46,21 @@ public class PlayerInput : MonoBehaviour
             transform.rotation = rotation;
         }
     }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(_speedPowerUp))
+        {
+            Destroy(collision.gameObject);
+            _Xspeed = _Xspeed + _speedModifier;
+        }
+        if (collision.gameObject.CompareTag(_slownessPowerUp))
+        {
+
+            Destroy(collision.gameObject);
+            _Xspeed = _Xspeed / _speedModifier;
+        }
+
+    }
 }
+
