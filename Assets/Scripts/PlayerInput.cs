@@ -1,5 +1,6 @@
 using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
@@ -10,7 +11,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float _speedModifier = 0.025f;
     [SerializeField] private string _speedPowerUp = "Speed PowerUp";
     [SerializeField] private string _slownessPowerUp = "Slowness PowerUp";
-
+    [SerializeField] private float _timer = 30;
+    
 
     void Start()
     {
