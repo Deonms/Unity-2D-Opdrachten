@@ -11,7 +11,6 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float _speedModifier = 0.025f;
     [SerializeField] private string _speedPowerUp = "Speed PowerUp";
     [SerializeField] private string _slownessPowerUp = "Slowness PowerUp";
-    [SerializeField] private float _timer = 30;
     
 
     void Start()
@@ -60,7 +59,7 @@ public class PlayerInput : MonoBehaviour
         {
 
             Destroy(collision.gameObject);
-            _Xspeed = _Xspeed / _speedModifier;
+            _Xspeed = (float)((float)_Xspeed - _speedModifier + 0.01);
         }
 
     }
