@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 150054408}
   m_Layer: 0
   m_Name: Speed Reset
-  m_TagString: Speed Reset
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,7 +640,7 @@ Transform:
   m_GameObject: {fileID: 150054407}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.89451, y: 10.558765, z: 0}
+  m_LocalPosition: {x: 85.88623, y: 2.447731, z: 0}
   m_LocalScale: {x: 0.7342, y: 0.6923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2725,7 +2725,7 @@ GameObject:
   - component: {fileID: 1703756301}
   m_Layer: 0
   m_Name: Speed PowerUp
-  m_TagString: Speed PowerUp
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2794,7 +2794,7 @@ Transform:
   m_GameObject: {fileID: 1703756298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.653702, y: 0.5247928, z: 0}
+  m_LocalPosition: {x: 67.645424, y: 0.5247928, z: 0}
   m_LocalScale: {x: 0.7342, y: 0.6923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3238,7 +3238,7 @@ GameObject:
   - component: {fileID: 1858255292}
   m_Layer: 0
   m_Name: Sloweness PowerUp
-  m_TagString: Slowness PowerUp
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3344,7 +3344,7 @@ Transform:
   m_GameObject: {fileID: 1858255291}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.672012, y: 2.571063, z: 0}
+  m_LocalPosition: {x: 77.663734, y: 2.571063, z: 0}
   m_LocalScale: {x: 0.7342, y: 0.6923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3993,6 +3993,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8724383000252113190, guid: 28fb71451ce383343baa59cb3638e298, type: 3}
+      propertyPath: _blockfalling
+      value: 
+      objectReference: {fileID: 8300000, guid: 59e476ffea7e4a64994868d573305c00, type: 3}
+    - target: {fileID: 8724383000252113190, guid: 28fb71451ce383343baa59cb3638e298, type: 3}
       propertyPath: _blockToDestroy
       value: 
       objectReference: {fileID: 1571219973}
@@ -4082,6 +4086,14 @@ PrefabInstance:
       propertyPath: _Yspeed
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 677310946114534467, guid: 1a4f025fd8de4e2479db175cd7350a8f, type: 3}
+      propertyPath: _jumpsound
+      value: 
+      objectReference: {fileID: 8300000, guid: f5472d022703cd34bb4c95bc960fa1c3, type: 3}
+    - target: {fileID: 677310946114534467, guid: 1a4f025fd8de4e2479db175cd7350a8f, type: 3}
+      propertyPath: _walksound
+      value: 
+      objectReference: {fileID: 8300000, guid: fff73de92ea76094a94d5a243579997e, type: 3}
     - target: {fileID: 677310946114534467, guid: 1a4f025fd8de4e2479db175cd7350a8f, type: 3}
       propertyPath: _powerUpPickUpSound
       value: 
