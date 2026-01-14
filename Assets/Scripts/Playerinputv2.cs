@@ -17,6 +17,7 @@ public class Playerinputv2 : MonoBehaviour
     [SerializeField] private int _peramount = 10;
 
     private int _score;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,7 +41,7 @@ public class Playerinputv2 : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(_coinpickupsound, transform.position);
             }
-                _amountofcoins.text = _score.ToString();
+            _amountofcoins.text = _score.ToString();
         }
         if (collision.gameObject.CompareTag(_Death))
         {
@@ -50,9 +51,9 @@ public class Playerinputv2 : MonoBehaviour
             transform.rotation = rotation;
         }
         if (_score == _peramount)
-        { 
+        {
             AudioSource.PlayClipAtPoint(_coinpickupsound10, transform.position);
             _peramount = _peramount + 10;
         }
     }
-}
+    }
