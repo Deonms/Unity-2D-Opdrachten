@@ -50,16 +50,16 @@ public class PlayerInput : MonoBehaviour
 
         private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(_speedPowerUp))
+        if (collision.gameObject.CompareTag(_speedPowerUp) && _Xspeed != 0.05 || _Xspeed >= 0.05)
         {
             Destroy(collision.gameObject);
             _Xspeed = _Xspeed + _speedModifier;
         }
-        if (collision.gameObject.CompareTag(_slownessPowerUp))
+        if (collision.gameObject.CompareTag(_slownessPowerUp) && _Xspeed != 0 || _Xspeed <= 0)
         {
 
             Destroy(collision.gameObject);
-            _Xspeed = (float)((float)_Xspeed - _speedModifier + 0.01);
+            _Xspeed = (float)((float)_Xspeed - _speedModifier );
         }
 
     }
