@@ -11,7 +11,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float _speedModifier = 0.025f;
     [SerializeField] private string _speedPowerUp = "Speed PowerUp";
     [SerializeField] private string _slownessPowerUp = "Slowness PowerUp";
-    
+    [SerializeField] private string _speedReset = "Speed Reset";
+
 
     void Start()
     {
@@ -48,20 +49,6 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-        private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag(_speedPowerUp) && _Xspeed != 0.05 || _Xspeed >= 0.05)
-        {
-            Destroy(collision.gameObject);
-            _Xspeed = _Xspeed + _speedModifier;
-        }
-        if (collision.gameObject.CompareTag(_slownessPowerUp) && _Xspeed != 0 || _Xspeed <= 0)
-        {
-
-            Destroy(collision.gameObject);
-            _Xspeed = (float)((float)_Xspeed - _speedModifier );
-        }
-
-    }
+       
 }
 

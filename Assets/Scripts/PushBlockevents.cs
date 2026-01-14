@@ -7,6 +7,7 @@ public class PushBlockevents : MonoBehaviour
     [SerializeField] private string _button = "PushBlockButton";
     [SerializeField] private GameObject _blockToDestroy;
     [SerializeField] private GameObject _blockToDestroy1;
+    [SerializeField] private AudioClip _blockfalling;
     private float _respawnYblock = 16.12177f;
     private float _respawnXblock = 28.61282f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,6 +35,10 @@ public class PushBlockevents : MonoBehaviour
             Quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
+        if (transform.rotation.x * transform.rotation.x > 0.01f && transform.rotation.z * transform.rotation.z > 0.01f)
+        {
+            AudioSource.PlayClipAtPoint(_blockfalling, transform.position);
+        }
     }
-    }
+}
 
