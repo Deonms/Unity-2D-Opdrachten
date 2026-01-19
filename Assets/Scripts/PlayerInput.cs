@@ -9,9 +9,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float _Xspeed = 0.025f;
     [SerializeField] public float _Yspeed = 45f;
     [SerializeField] private float _speedModifier = 0.025f;
-    [SerializeField] private string _speedPowerUp = "Speed PowerUp";
-    [SerializeField] private string _slownessPowerUp = "Slowness PowerUp";
-    [SerializeField] private string _speedReset = "Speed Reset";
+    [SerializeField] private string _PowerUp = "PowerUp";
+    [SerializeField] private AudioClip _powerUpPickUpSound;
 
 
     void Start()
@@ -48,7 +47,14 @@ public class PlayerInput : MonoBehaviour
             transform.rotation = rotation;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        PowerUpValue powerUpValue;
+        if (collision.gameObject.CompareTag(_PowerUp) && collision.gameObject.TryGetComponent<PowerUpValue>(out powerUpValue))
+        {
+            _Xspeed += powerUpValue.GetPowerUpWorth();
+            Destroy(collision.gameObject);
+        }
+    }
 
-       
 }
-

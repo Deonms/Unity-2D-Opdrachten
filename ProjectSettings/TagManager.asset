@@ -11,6 +11,9 @@ TagManager:
   - PushBlock
   - PushBlockButton
   - DestroyPushwall1
+  - PowerUp
+  - DestroyablePlatform
+  - TriggerBlock
   layers:
   - Default
   - TransparentFX

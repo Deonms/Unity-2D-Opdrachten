@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PushBlockevents : MonoBehaviour
@@ -7,9 +8,12 @@ public class PushBlockevents : MonoBehaviour
     [SerializeField] private string _button = "PushBlockButton";
     [SerializeField] private GameObject _blockToDestroy;
     [SerializeField] private GameObject _blockToDestroy1;
-    [SerializeField] private AudioClip _blockfalling;
-    private float _respawnYblock = 16.12177f;
-    private float _respawnXblock = 28.61282f;
+    [SerializeField] private AudioClip _DestroySound;
+    [SerializeField] private float _respawnYblock = 16.12177f;
+    [SerializeField] private float _respawnXblock = 28.61282f;
+    [SerializeField] private string _destoryableBlock = "DestroyablePlatform";
+    [SerializeField] private string _triggerblock = "TriggerBlock";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +31,7 @@ public class PushBlockevents : MonoBehaviour
         {
             Destroy(_blockToDestroy);
             Destroy(_blockToDestroy1);
+            AudioSource.PlayClipAtPoint(_DestroySound, transform.position);
         }
         if (collision.gameObject.CompareTag(_Death))
         {
@@ -35,9 +40,9 @@ public class PushBlockevents : MonoBehaviour
             Quaternion rotation = new(0, 0, 0, 0);
             transform.rotation = rotation;
         }
-        if (transform.rotation.x * transform.rotation.x > 0.01f && transform.rotation.z * transform.rotation.z > 0.01f)
+        if (collision.gameObject.CompareTag(_destoryableBlock))
         {
-            AudioSource.PlayClipAtPoint(_blockfalling, transform.position);
+            Destroy(collision.gameObject);
         }
     }
 }
