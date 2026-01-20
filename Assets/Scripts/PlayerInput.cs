@@ -52,7 +52,7 @@ public class PlayerInput : MonoBehaviour
         PowerUpValue powerUpValue;
         if (collision.gameObject.CompareTag(_PowerUp) && collision.gameObject.TryGetComponent<PowerUpValue>(out powerUpValue))
         {
-            _Xspeed += powerUpValue.GetPowerUpWorth();
+            _Xspeed = powerUpValue.GetPowerUpWorth();
             Destroy(collision.gameObject);
         }
     }
