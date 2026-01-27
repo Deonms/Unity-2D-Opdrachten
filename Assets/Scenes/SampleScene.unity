@@ -3349,11 +3349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3135175788419559089, guid: c88f632d48475d34a9b788cead63e616, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 129.59668
+      value: 129.22449
       objectReference: {fileID: 0}
     - target: {fileID: 3135175788419559089, guid: c88f632d48475d34a9b788cead63e616, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 52.420746
+      value: 53.7234
       objectReference: {fileID: 0}
     - target: {fileID: 3135175788419559089, guid: c88f632d48475d34a9b788cead63e616, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3397,7 +3397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8146306205098563145, guid: c88f632d48475d34a9b788cead63e616, type: 3}
       propertyPath: m_Name
-      value: Coin
+      value: Coin (win Coin)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
