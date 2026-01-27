@@ -10,6 +10,7 @@ public class PlatformSpawner : MonoBehaviour
     [SerializeField] private List<Transform> _PlatformSpawnLocations = new List<Transform>();
     [SerializeField] private List<Transform> _DeleteonTrigger = new List<Transform>();
     private int _maximumPlatofrmSpawning = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
 {

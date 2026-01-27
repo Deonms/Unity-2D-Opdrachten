@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,5 +9,6 @@ public class SceneHandler : MonoBehaviour
         print("game restart");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
 }
+
+

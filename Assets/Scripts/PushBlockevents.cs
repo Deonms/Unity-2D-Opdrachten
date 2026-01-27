@@ -1,6 +1,9 @@
+using JetBrains.Annotations;
 using System;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PushBlockevents : MonoBehaviour
 {
@@ -13,6 +16,7 @@ public class PushBlockevents : MonoBehaviour
     [SerializeField] private float _respawnXblock = 28.61282f;
     [SerializeField] private string _destoryableBlock = "DestroyablePlatform";
     [SerializeField] private string _triggerblock = "TriggerBlock";
+    [SerializeField] private string _triggerblockReloadScreen;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,11 +27,11 @@ public class PushBlockevents : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-     private void OnCollisionEnter2D(Collision2D collision)
-     {
-         if (collision.gameObject.CompareTag(_button))
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(_button))
         {
             Destroy(_blockToDestroy);
             Destroy(_blockToDestroy1);
@@ -44,6 +48,14 @@ public class PushBlockevents : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag(_triggerblockReloadScreen))
+        {
+            print("game restart");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
+
+
+
 

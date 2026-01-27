@@ -1,2 +1,12 @@
 fileFormatVersion: 2
 guid: 62163dd1bb65d5d4ba998f140d9cf4a5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _winScreen: {fileID: 1569650713034617279, guid: 5fe39ce3930216e478d715b45744ab64, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
